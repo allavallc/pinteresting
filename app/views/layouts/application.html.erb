@@ -5,14 +5,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-	<%= link_to "home", root_path %>
-	<%= link_to "about us", about_path %>
+<!-- below was a way to cut out a large chunk of code and have a 'partial', whichi is a partial portion of code for a layout that is commonly used but that is large.
+	
+The corresponding 'partial' page has to have a "_" in front of the name; hence the name "_header.html.erb"
+	
+	-->
+<%= render 'layouts/header' %>
 
 
-<%= yield %>
+<div class="container">
+	
+	<%= yield %>
+
+</div>
 
 </body>
 </html>
