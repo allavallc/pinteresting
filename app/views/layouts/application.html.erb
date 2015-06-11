@@ -18,6 +18,12 @@ The corresponding 'partial' page has to have a "_" in front of the name; hence t
 
 
 <div class="container">
+	<!--below allows to 'flash' users messages if they have issues logging in, etc. -->
+	<!-- note that there is no "=" below, because you don't want the actual code show up on the page -->
+	<% flash.each do |name, msg| %>
+		<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+	<% end %>
+	<!-- end flash -->
 	
 	<%= yield %>
 
