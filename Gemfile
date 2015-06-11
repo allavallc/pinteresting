@@ -29,6 +29,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'bootstrap-sass'
 
+#devise gem for user adding and authenticating
+
+
 #below shows that you only need to use the sqlite3 for developemnt and test
 group :development, :test do
   gem 'sqlite3'
