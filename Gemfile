@@ -3,8 +3,13 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
+
+#****
+# took out the below and put into group to separate development from production
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+# ****
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -23,3 +28,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'bootstrap-sass'
+
+#below shows that you only need to use the sqlite3 for developemnt and test
+group :development, :test do
+  gem 'sqlite3'
+end
+
+# below says to use posgress for production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'  
+end
