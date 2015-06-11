@@ -26,11 +26,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
-
 gem 'bootstrap-sass'
 
 #devise gem for user adding and authenticating
-
+gem 'devise', '~> 3.1.0.rq2'
 
 #below shows that you only need to use the sqlite3 for developemnt and test
 group :development, :test do
